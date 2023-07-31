@@ -13,12 +13,8 @@ import Thumbnail from "./Thumbnail";
 import { ScrollArea } from "./ui/ScrollArea";
 import { Button } from "./ui/Button";
 import Link from "next/link";
-import { Checkbox } from "./ui/Checkbox";
 import { RadioGroup, RadioGroupItem } from "./ui/RadioGroup";
 import InfoBox from "./InfoBox";
-import DownlaodButton from "./DownlaodButton";
-import DownloadButton from "./DownlaodButton";
-import { useRouter } from "next/navigation";
 
 interface Props {
   children: ReactNode;
@@ -27,7 +23,6 @@ interface Props {
 
 const ImageModal: FC<Props> = ({ children, image }) => {
   const [size, setSize] = useState("");
-  const router = useRouter();
   const tagsList = image.tags ? image.tags.split(",") : [];
 
   const handleDownload = () => {

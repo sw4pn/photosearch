@@ -22,7 +22,7 @@ export const API_KEY = process.env.PIXABAY_API_KEY;
 async function getBackground() {
   try {
     const res = await fetch(
-      `https://piixabay.com/api/?key=${API_KEY}&q=nature&per_page=25`
+      `https://pixabay.com/api/?key=${API_KEY}&q=nature&per_page=25&image_type=photo`
     );
 
     if (!res.ok) {
