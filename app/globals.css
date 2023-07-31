@@ -73,6 +73,34 @@
     @apply border-border;
   }
   body {
-    @apply bg-background text-foreground;
+    background-color: #252525;
+    background: url("/public/images/nature.jpg");
   }
+}
+@layer utilities {
+  @variants responsive {
+    .masonry-3-col {
+      column-count: 3;
+      column-gap: 1em;
+    }
+    .masonry-2-col {
+      column-count: 2;
+      column-gap: 1em;
+    }
+    .break-inside {
+      break-inside: avoid;
+    }
+  }
+}
+
+.text-shadow-xs {
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.25);
+}
+
+.text-shadow-sm {
+  text-shadow: 0 2px 3px rgba(0, 0, 0, 0.3);
+}
+
+.text-shadow {
+  text-shadow: 0 4px 4px rgba(0, 0, 0, 0.45);
 }

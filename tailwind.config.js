@@ -80,7 +80,7 @@ module.exports = {
       },
       boxShadow: {
         inset:
-          "-3.94px 3.94px 3.94px 0px #FFFFFF6E inset, 3.94px -3.94px 3.94px 0px #B6B6B66E inset",
+          "-3.94px 3.94px 3.94px 0px #FFFFFF6E inset, 3.94px -3.94px 3.94px 0px #B6B6B66E inset", 
       },
     },
   },

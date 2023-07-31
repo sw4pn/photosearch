@@ -5,6 +5,7 @@ import { Alexandria, Dancing_Script, Inter } from "next/font/google";
 import Container from "@/components/Container";
 import Image from "next/image";
 import nature from "@/public/images/nature.jpg";
+import { ScrollTopButton } from "@/components/ScrollTopButton";
 
 const inter = Inter({ subsets: ["latin"], variable: "--font-inter" });
 const comfort = Alexandria({
@@ -16,7 +17,7 @@ const dancing = Dancing_Script({
   variable: "--font-dancing",
 });
 
-const API_KEY = process.env.PIXABAY_API_KEY;
+export const API_KEY = process.env.PIXABAY_API_KEY;
 
 async function getBackground() {
   try {
@@ -71,6 +72,15 @@ export default async function RootLayout({
         <Container>
           <Header />
           {children}
+          <div className="flex flex-col gap-1 justify-center items-center text-center text-neutral-300">
+            <span className="block backdrop-blur-sm bg-neutral-700/40 p-0.5 rounded-md">
+              &copy; 2023, Image Search App,
+            </span>
+            <span className="text-sm block backdrop-blur-sm bg-neutral-700/40 p-0.5  rounded-md">
+              Developed with 🧡 using NEXT JS & Pixabay API.
+            </span>
+          </div>
+          <ScrollTopButton />
         </Container>
       </body>
     </html>
